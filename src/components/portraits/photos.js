@@ -14,10 +14,15 @@ const images = importAll(
 
 const photoArr = [];
 
-for (const [_, value] of Object.entries(images)) {
+for (const [key, value] of Object.entries(images)) {
+  const order = key.replace(/\.(png|jpe?g|svg)$/, "");
+  value.order = Number(order);
   photoArr.push(value);
 }
 
+photoArr.sort((a, b) => a.order - b.order);
+
+console.log(photoArr);
 const photos = photoArr.map(({ default: photo }) => ({
   src: photo.src,
   width: photo.width,
