@@ -7,23 +7,31 @@
   place-items: center;
   font-family: system-ui, sans;
   line-height: 40px;
+  margin: 0 20px;
+  position: relative;
+  top: -35px;
+  color: black;
 }
 
-.a-button::before {
-  background: hsl(45 100% 70%);
+.a-button:hover {
+  color: floralwhite;
+}
+
+/* .a-button::before {
+  background: hsl(0, 0%, 55%);
   content: "";
   inset: 0;
   position: absolute;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   z-index: -1;
-}
+} */
 
-.a-button:hover::before {
+/* .a-button:hover::before {
   transform: scaleX(1);
   transform-origin: left;
-}
+} */
 
 .a-button:visited { text-decoration: none; color:black; }
 
@@ -31,5 +39,5 @@
   margin:auto;
   width: 45%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }

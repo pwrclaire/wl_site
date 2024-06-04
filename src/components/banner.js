@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import logo from "./logo.jpg";
+import logo from "./winnie.png";
 import navbar from "./navBar";
 
 export default function banner() {
   return (
     <div style={styles.container}>
-      <Image id="logo" src={logo}></Image>
+      <Image id="logo" src={logo} height={300}></Image>
       {navbar()}
     </div>
   );

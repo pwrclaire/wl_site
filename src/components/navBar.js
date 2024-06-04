@@ -11,9 +11,9 @@ const Navbar = () => {
         <a href="/automotive" className={styles["a-button"]}>
           AUTOMOTIVE
         </a>
-        <a href="/contact" className={styles["a-button"]}>
+        {/* <a href="/contact" className={styles["a-button"]}>
           CONTACT
-        </a>
+        </a> */}
       </div>
     );
   };
