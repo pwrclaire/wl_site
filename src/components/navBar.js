@@ -6,10 +6,10 @@ const Navbar = () => {
     return (
       <div className={styles.navbar}>
         <a href="/portraits" className={styles["a-button"]}>
-          PORTRAIT
+          <span>PORTRAIT</span>
         </a>
         <a href="/automotive" className={styles["a-button"]}>
-          AUTOMOTIVE
+          <span>AUTOMOTIVE</span>
         </a>
         {/* <a href="/contact" className={styles["a-button"]}>
           CONTACT

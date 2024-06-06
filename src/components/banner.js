@@ -6,7 +6,7 @@ import navbar from "./navBar";
 export default function banner() {
   return (
     <div style={styles.container}>
-      <Image id="logo" src={logo} height={300}></Image>
+      <Image id="logo" src={logo} height={300} priority></Image>
       {navbar()}
     </div>
   );

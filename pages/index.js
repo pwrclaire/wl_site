@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import { CacheProvider } from "@emotion/react";
-import { cache } from "@emotion/css";
 import styles from "../styles/Home.module.css";
 import cover from "../src/components/banner.jpg";
+import style from "./style.module.css";
 
 export default function Home() {
   return (
@@ -13,16 +12,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 style={style.header}>WINNIE LOK</h1>
+      <h1 className={style["header"]}>WINNIE LOK</h1>
       <div style={style.buttonContainer}>
         <span>
-          <a style={style.buttons} href="/portraits">
-            PORTRAITS
+          <a className={style["buttons"]} href="/portraits">
+            <span>PORTRAITS</span>
           </a>
         </span>
         <span>
-          <a style={style.buttons} href="/automotive">
-            AUTOMOTIVE
+          <a className={style["buttons"]} href="/automotive">
+            <span>AUTOMOTIVE</span>
           </a>
         </span>
       </div>
@@ -33,9 +32,8 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         }
         * {
           box-sizing: border-box;
@@ -44,28 +42,3 @@ export default function Home() {
     </div>
   );
 }
-
-const style = {
-  header: {
-    color: "white",
-    position: "relative",
-    zIndex: 9999,
-    top: "200px",
-    fontSize: "5rem",
-    top: "-188px",
-    textShadow: "0 0 8px #000",
-  },
-  buttons: {
-    position: "relative",
-    zIndex: 10999,
-    color: "white",
-    textAlign: "center",
-    textDecoration: "none",
-    border: "2px white solid",
-    padding: "5px",
-    margin: "10px",
-    top: "88px",
-    fontSize: "1.5rem",
-    textShadow: "0 0 8px #000",
-  },
-};

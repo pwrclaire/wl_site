@@ -15,6 +15,6 @@ export default function footer() {
 const styles = {
   footer: {
     textAlign: "center",
-    padding: "20px",
+    padding: "10px",
   },
 };

@@ -22,7 +22,6 @@ for (const [key, value] of Object.entries(images)) {
 
 photoArr.sort((a, b) => a.order - b.order);
 
-console.log(photoArr);
 const photos = photoArr.map(({ default: photo }) => ({
   src: photo.src,
   width: photo.width,
