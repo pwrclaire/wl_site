@@ -9,14 +9,20 @@
   line-height: 40px;
   margin: 0 20px;
   position: relative;
-  top: -35px;
+  /* top: -35px; */
   color: black;
   transition: all 0.5s;
   cursor: pointer;
+  font-weight: 700;
 }
 
-/* .a-button::before {
-  background: hsl(0, 0%, 55%);
+.a-button:hover {
+  color: #ff8210;
+}
+
+/* 
+.a-button::before {
+  color: hsl(77, 27%, 41%);
   content: "";
   inset: 0;
   position: absolute;
@@ -24,14 +30,14 @@
   transform-origin: right;
   transition: transform 0.2s ease-in-out;
   z-index: -1;
-} */
+}
 
-/* .a-button:hover::before {
+.a-button:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 } */
 
-
+/* 
 .a-button span {
   cursor: pointer;
   display: inline-block;
@@ -55,11 +61,12 @@
 .a-button:hover span:after {
   opacity: 1;
   right: 0;
-}
+} */
 
 .navbar {
-  margin:auto;
-  width: 45%;
+  margin: auto;
+  width: 40%;
   display: flex;
   justify-content: center;
+  position: relative;
 }

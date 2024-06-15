@@ -1,5 +1,10 @@
-.eee {
-  color: green;
+.container {
+  height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
@@ -7,9 +12,29 @@
   position: relative;
   z-index: 9999;
   top: -200px;
-  font-size: 6rem;
   text-shadow: 0 0 8px #000;
   text-align: center;
+}
+
+.header-top {
+  font-size: 8rem;
+}
+
+.header-bottom {
+  font-size: 5rem;
+  color: #ff8210;
+  top: -40px;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .header-top {
+    font-size: 4rem;
+  }
+  .header-bottom {
+    font-size: 3rem;
+    top: -20px;
+  }
 }
 
 .buttons {
@@ -21,37 +46,15 @@
   border: 2px white solid;
   padding: 10px;
   margin: 10px;
-  top: 88px;
+  top: 220px;
   font-size: 1.4rem;
   text-shadow: 0 0 8px #000;
   transition: all 0.5s;
   cursor: pointer;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .buttons:hover {
-  translate: 2px;
-}
-.buttons span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.buttons span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.buttons:hover span {
-  padding-right: 25px;
-}
-
-.buttons:hover span:after {
-  opacity: 1;
-  right: 0;
+  background-color: #ff8210;
+  color: white;
 }

@@ -5,16 +5,27 @@ import navbar from "./navBar";
 
 export default function banner() {
   return (
-    <div style={styles.container}>
-      <Image id="logo" src={logo} height={300} priority></Image>
-      {navbar()}
-    </div>
+    <duv>
+      <div style={styles.container}>
+        <Image
+          id="logo"
+          src={logo}
+          layout="fill"
+          objectFit="contain"
+          priority
+        ></Image>
+      </div>
+      <div>{navbar()}</div>
+      <br />
+    </duv>
   );
 }
 
 const styles = {
   container: {
     textAlign: "center",
-    padding: "20px",
+    position: "relative",
+    width: "100%",
+    height: "300px",
   },
 };

@@ -1,31 +1,45 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import cover from "../src/components/banner.jpg";
 import style from "./style.module.css";
+import { Kaushan_Script, League_Spartan } from "next/font/google";
+
+const poppins = Kaushan_Script({
+  subsets: ["latin"],
+  display: "block",
+  variable: "--font-poppins",
+  weight: ["400"],
+});
+
+const league = League_Spartan({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={style.container}>
       <Head>
         <title>Winnie Lok Photography</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1 className={style["header"]}>WINNIE LOK</h1>
+      <div className={style["header"]}>
+        <span className={`${league.className} ${style["header-top"]}`}>
+          WINNIE LOK
+        </span>
+        <br />
+        <span className={`${poppins.className} ${style["header-bottom"]}`}>
+          Photography
+        </span>
+      </div>
       <div style={style.buttonContainer}>
         <span>
           <a className={style["buttons"]} href="/portraits">
-            <span>PORTRAITS</span>
-          </a>
-        </span>
-        <span>
-          <a className={style["buttons"]} href="/automotive">
-            <span>AUTOMOTIVE</span>
+            <span>Portfolio</span>
           </a>
         </span>
       </div>
-      <Image src={cover} objectFit="cover" fill={true} />
+      <Image src={cover} objectFit="cover" fill={true} priority />
 
       <style jsx global>{`
         html,
