@@ -5,6 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 import photos from "../../src/components/automotive/photos";
 import banner from "../../src/components/banner";
 import footer from "../../src/components/footer";
+import NextJsImage from "../../src/components/photoLoader";
 
 export default function index() {
   const [index, setIndex] = useState(-1);
@@ -17,6 +18,7 @@ export default function index() {
         photos={photos}
         spacing={12}
         targetRowHeight={350}
+        renderPhoto={NextJsImage}
         onClick={({ index }) => setIndex(index)}
       />
       <Lightbox
