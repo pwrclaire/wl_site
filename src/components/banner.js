@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import logo from "./winnie.png";
 import navbar from "./navBar";
+import style from "./general.module.css";
 
 export default function banner() {
   return (
     <duv>
-      <div style={styles.container}>
+      <div className={style["container"]}>
         <Image
           id="logo"
           src={logo}
@@ -20,12 +21,3 @@ export default function banner() {
     </duv>
   );
 }
-
-const styles = {
-  container: {
-    textAlign: "center",
-    position: "relative",
-    width: "100%",
-    height: "300px",
-  },
-};
