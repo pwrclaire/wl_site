@@ -24,7 +24,6 @@ export default function index() {
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}
-        // enable optional lightbox plugins
       />
       {footer()}
     </>
